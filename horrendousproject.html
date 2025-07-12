@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML 5 Boilerplate</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <!-- Start Screen containers  -->
+     <div class="start-screen" id="startscreen">
+      <img id="cafeauline-logo" src="images/cafeauline_logo.png">
+      <div class="intro-message" id="intro-message">
+        <div class="intro-message-icon">Welcome</div>
+        <div class="intro-message-img"></div>
+        <div class="intro-message-page"><h3>Welcome to Cafe au Line!</h3><br>It is recommended to play with headphones and audio. If not, how would you hear my voice?<br>This game is a piece of fiction and does not represent real life. However, the lessons we learn are indeed real. Got it?</div>
+        <button class="intro-message-ok" onclick="closeIntroMessage()">Got It</button>
+      </div>
+      <div class="intro-menu-options" id="intro-menu-options">
+        <button class="game-start" onclick="startOpeningSequence()">Game Start</button>
+        <button class="extras" onclick="showExtras()" id="extras-button">Extras</button>
+      </div>
+      <div class="extras-container" id="extras-container">
+        <div class="extras-header">
+          <h2>Extras</h2>
+        </div>
+        <div class="extras-images">
+        <button class="ending-artwork" id="ending-artwork" onclick="expandImage('ending-artwork')"><img src="images/Ending_Artwork.jpg"></button>
+        <button class="victor-character-sheet" id="victor-sheet" onclick="expandImage('victor-sheet')"><img src="images/victor_charactersheet.png"></button>
+        <button class="wes-character-sheet" id="wes-sheet" onclick="expandImage('wes-sheet')"><img src="images/wes_charactersheet.png"></button>
+      </div>
+       <button class="close-extras" id="close-extras" onclick="document.getElementById('extras-container').style.display='none'">Close</button>
+      </div>
+     </div>
+    <!-- Desktop Taskbar containers  -->
+    <div class="taskbar" id="taskbar">
+      <div class="taskbar-container">
+            <button class="start-button" id="start-button" onclick="openStartMenu()"><img src="images/WinThose_icon.png">START</button>
+            <div class="start-menu" id="start-menu">
+              <!-- Start menu content goes here -->
+              <button class="start-jellygram" onclick="toggleAppWindow('container')">Jellygram</button>
+              <button class="start-instogram" onclick="handleInstogramButton()">Instogram</button>
+              <button class="start-taskmanager" onclick="toggleAppWindow('taskmanager-container')">Task Manager</button>
+              <button class="shutdown-button" onclick="shutdown()">Shutdown</button>
+              <img src="images/icon_Wes.png" alt="Wes Icon" class="wes-icon"><p>Wes</p>
+          </div>
+      </div>
+     </div>
+     <!-- Start Call container  -->
+      <div class="start-call" id="start-call">
+         <div class="call"> <p>Call</p>
+  <div class="call-img"> </div>
+</div>
+<div class="call-container">
+  <div class="call-interface"> <img src="images/start_call.png" class="call-interface-bg">
+    <div class="button-list" id="call-options">
+    <button class="pickup-call" onclick="startCall()"><img src="images/pickup_call.png"></button>
+    <button class="skip-call" onclick="skipCall()"><img src="images/skip_call.png"></button>
+    </div>
+    </div>
+</div>
+      </div>
+    <!-- All computer application container  -->
+     <div class="computer" id="computer-container">
+    <!-- Desktop application containers  -->
+    <div class="desktop">
+      <div class="desktop-container">
+        <div class="jellygramicon" id="jellygramicon">
+          <img src="images/jellygram.png" alt="Jellygram app">
+          <button class="jellygramapp" onclick="toggleAppWindow('container')"></button>
+        </div>
+        <div class="instogramicon" id="instogramicon">
+          <img src="images/instogram.png" alt="instogram app">
+          <button class="instogramapp" onclick="handleInstogramButton()"></button>
+        </div>
+         <div class="taskmanagericon" id="taskmanagericon">
+          <img src="images/taskmanager.png" alt="taskmanager app">
+          <button class="taskmanagerapp" onclick="toggleAppWindow('taskmanager-container')"></button>
+        </div>
+      </div>
+    </div>
+  <!-- Instogram password input containers  --->
+   <div class="instogram-password-container" id="password-container">
+  <!--  Instogram password icon section starts    -->
+     <div class="enter-password"> <p>Enter Password</p>
+  <div class="password-img"> </div>
+  </div>
+  <div class="icons">
+   <div class="minimize"> <img src="images/button_minimise.png" alt="Minimize"> 
+  <button class="minimise-button" onclick="toggleAppWindow('password-container')"></button>
+</div>
+</div>
+<!--  Instogram password page starts    -->
+    <div class="password-page" id=""> 
+       <div class="passwordbg"> <img src="images/passwordbg.png" alt="Background"></div>
+    <div class="password-inner-page">
+    <div class="account-picture"> <img src="images/icon_Wes.PNG"></div>
+    <div class="account-name"><p>@wesneday</p></div>
+    <form class="password-input-form">
+      <input type="text" class="password-input" id="password-input" required placeholder="password" />
+    </form>
+    <button type="submit" class="password-enter" onclick="checkPassword()">Create account</button>
+  </div>
+  </div>
+  </div>
+  <!-- Instogram application containers  --->
+   <div class="instogram" id="instogram-container">
+   <!--  Instogram icon section starts    -->
+     <div class="social-media"> <p>social media</p>
+  <div class="social-media-img"> </div>
+  </div>
+  <div class="icons">
+   <div class="minimize"> <img src="images/button_minimise.png" alt="Minimize"> 
+  <button class="minimise-button" onclick="toggleAppWindow('instogram-container')"></button>
+</div>
+</div>
+   <!--  Social media header section starts    -->
+     <div class="container3">
+      <div class="instogram-header">
+        <div class="instogram-title"> <p>Instogram</p></div>
+        </div>
+    <!-- Post inbox section starts -->
+     <div class="post-page">
+       <div class="post-border">
+        <div class="story-header"> 
+          <div container4>
+            <img src="images/icon_Wes.png" class="storyimg">
+            </div>
+        </div>
+            <div class="post-inbox">
+              <div class="post-thread" id="post-thread">
+                <div class="post-container">
+                <div class="post-sender-img"></div>
+                <div class="post-sender">Ame-chan @amechanlovespchan</div>
+                <div class="post-content">I love P-chan so much, I wanna marry him.</div>
+                <div class="post-image"></div>
+                <div class="post-time">1:45 AM</div>
+                </div>
+              </div>
+        </div>
+        </div>
+        </div>
+      </div>
+    </div>
+   <!--  Jellygram application container  -->
+  <div class="jellygram" id="container">
+<!--  Jellygram icon section starts    -->
+  <div class="jine"> <p>Jellygram</p>
+  <div class="jine-img"> </div>
+</div>
+  <div class="icons">
+   <div class="minimize"> <img src="images/button_minimise.png" alt="Minimize"> 
+  <button class="minimise-button" onclick="toggleAppWindow('container')"></button>
+</div>
+   </div>
+    <div class="container1">
+<!--  Info page button starts    -->
+      <div class="info-button">
+        <button class="info-button" onclick="toggleAppWindow('info-page')"> <img src="images/icon_info.png" alt="Info"></button>
+      </div>
+<!--  Info page section starts    -->
+  <div class="info-page" id="info-page">
+    <button class="close-button" onclick="toggleAppWindow('info-page')"><img src="images/button_close.png" alt="Close"></button>
+    <div class="info-header">
+        <h2>Information</h2>
+    </div>
+    <p>Welcome to Jellygram!<br>Here you can chat with your friends and share your thoughts.<br>Our app works on public servers and are end-to-end encrypted.</p><p>However, please be cautious about sharing personal information as we are not responsible for any data breaches.</p><p>Ensure you are practising safe online etiquette when finding friends to talk to.</p>
+    <h2>Enjoy your stay!</h2>
+  </div>
+<!--  Message header section starts    -->
+         <div class="msg-header">
+            <div class="container2">
+                <img src="images/icon_Victor.png" class="msgimg">
+                <div class="active ">
+                    <p>Victor</p>
+                </div>
+            </div>
+        </div>
+      </div>
+<!-- Chat inbox section starts -->
+    <div class="chat-page">
+            <div class="msg-inbox">
+<!-- Chat message section starts -->
+                     <div class="chat-thread" id="chat-thread"> </div>
+                        <div class="choices" id="choices"></div>      
+                    </div>
+        </div>
+        </div>
+<!-- Webcam application containers  --->
+   <div class="webcam" id="webcam-container">
+    <!--  Webcam icon section starts    -->
+      <div class="webcam-icon"> <p>Webcam</p>
+      <div class="webcam-img"></div>
+      </div>
+      <div class="icons">
+   <div class="minimize"> <img src="images/button_minimise.png" alt="Minimize"> 
+  <button class="minimise-button" onclick="openWebcam()"></button>
+  </div>
+  </div>
+  <!--  Webcam images section starts    -->
+    <div class="webcam-expressions">
+   <img id="webcam-gif" src="images/Smiling_Gif.gif"alt="Webcam GIF"></div>
+  </div>
+<!-- Task manager application containers  --->
+   <div class="taskmanager" id="taskmanager-container">
+   <!--  Task manager icon section starts    -->
+     <div class="taskmanager-header">
+     <div class="taskmanager-icon"> <p>Task Manager</p>
+  <div class="taskmanager-img"> </div>
+  </div>
+  <div class="icons">
+   <div class="minimize"> <img src="images/button_minimise.png" alt="Minimize"> 
+  <button class="minimise-button" onclick="toggleAppWindow('taskmanager-container')"></button>
+</div>
+</div>
+</div>
+<!-- Task manager text containers  --->
+ <div class="tasks-inbox">
+  <div class="task-thread">
+    <div class="tasks-container" id="tasklist">
+    <div id="task1"><p>1. Testing the basics.</p></div>
+    <div id="task2"><p>2. Viewing your Task manager.</p></div>
+    <div id="task3"><p>3. Learning about account safety.</p></div>
+    <div id="task4"><p>4. Setting up Instogram.</p></div>
+    <div id="task5"><p>5. Learning about dangerous things online.</p></div>
+    <div id="task6"><p>6. Finish all of our tasks!</p></div>
+    </div>
+    </div>
+  </div>
+ </div>
+  <div class="scamthread" id="scamthread">
+<!--  Scam icon section starts    -->
+  <div class="scamicons"> <p>???</p>
+  <div class="scam-img"> </div>
+</div>
+  <div class="icons">
+   <div class="minimize"> <img src="images/button_minimise.png" alt="Minimize"> 
+  <button class="minimise-button" onclick="toggleAppWindow('scamthread')"></button>
+</div>
+   </div>
+    <div class="container6">
+      <div class="scam-post-inbox">
+              <div class="scam-post-thread" id="scampost-thread">
+                <div class="scam-post-container">
+                <div class="scam-post-sender">thebigg</div>
+                <div class="scam-post-content">$$$ Now is the time to invest $$$. <br>Transfer minimum of $5,000 to "The Big G" for your returns.<h3>DM @THEBIGG Now.</h3></div>
+                <div class="scam-post-time">4:49 AM</div>
+                </div>
+              </div>
+        </div>  
+ </div>
+ </div>
+</div>
+ <div id="fade-overlay"></div>
+ <div id="cover-overlay" style="position:fixed;top:0;left:0;width:100vw;height:100vh;background:#000;z-index:9999;display:flex;align-items:center;justify-content:center;font-family:'DinkieBitMap';">
+  <span style="color:#fff;font-size:2em;">Click to boot up WinThose</span>
+</div>
+ <img id="bootup-overlay" src="images/WinThose_Bootup.gif" Alt="bootup-gif">
+ <img id="winthose-overlay" src="images/WinThose_Bootscreen.png">
+ <div id="outside-bg"><img src="images/background_outside.png"></div>
+  <div class="final-message" id="final-message">
+    <!--  final message content starts    -->
+      <div class="message-icon"> <p>The end</p>
+      <div class="message-img"></div>
+      </div>
+  <!--  Webcam images section starts    -->
+    <div class="message-page">
+    <div class="message-content">
+      <p>And it was happily ever after!</p>
+      <button class="close-message" onclick="showThankYouMessage()">Close</button>
+   </div>
+   </div>
+   </div>
+  <!--  Thank you message section starts    -->
+   <div id="thank-you-overlay" class="thank-you-overlay">
+  <img src="images/thank_you.png" class="thank-you-image" alt="Thank you!">
+</div>
+ <!--  Audio files for the game starts    -->
+<audio id="game-background-music" src="sounds/The World at Bay Beyond the Pillow.wav" loop></audio>
+<audio id="menu-background-music" src="sounds/Interstellar Drift.wav"></audio>
+<audio id="start-call-audio" src="sounds/@Resources_Audio_Boot_Caution.wav" loop></audio>
+<audio id="ping-audio" src="sounds/jine_send_stamp.wav"></audio>
+<audio id="close-window-audio" src="sounds/window_close.wav"></audio>
+<audio id="open-window-audio" src="sounds/open.wav"></audio>
+<audio id="choice-select-audio" src="sounds/pop_tutorial.wav"></audio>
+<audio id="task-finish" src="sounds/@Resources_Audio_endHaishin.wav"></audio>
+<audio id="shutdown-audio" src="sounds/shutdown.wav"></audio>
+<audio id="outside-audio" src="sounds/chirping.wav"></audio>
+<audio id="bootup-audio" src="sounds/@Resources_Audio_boot.wav"></audio>
+<audio id="bloop-audio" src="sounds/piporo.wav"></audio>
+<audio id="execute-audio" src="sounds/@Resources_Audio_execute.wav"></audio>
+<audio id="phone-call-audio" src="sounds/phone_call.wav"></audio>
+<script src="game.js"></script>
+</body>
+</html>
