@@ -4,10 +4,7 @@
 }
 @font-face {
     font-family: "PixelMPLus10";
-    src: url(fonts/PixelMPLus10-regular.ttf);
-    src: url(fonts/PixelMPLus10-regular.woff) format("woff"),
-       url(fonts/PixelMPLus10-regular.otf) format("opentype"),
-       url(fonts/PixelMPLus10-regular.svg#filename) format("svg");
+    src: url(fonts/DinkieBitmap-9px.ttf);
 }
 /* Start Menu Container */
 #cafeauline-logo {
