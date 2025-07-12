@@ -1,0 +1,1355 @@
+@font-face {
+    font-family: "DinkieBitmap";
+    src: url(fonts/DinkieBitmap-7px.ttf);
+}
+@font-face {
+    font-family: "PixelMPLus10";
+    src: url(fonts/PixelMPLus10-regular.ttf);
+}
+/* Start Menu Container */
+#cafeauline-logo {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30em;
+  height: 17em;
+  top: 20px;
+}
+#cafeauline-logo img{
+  padding: 3em 1em 1em 1em;
+  position: absolute;
+}
+.intro-message {
+  z-index: 6;
+  font-family: "DinkieBitmap";
+  background:#efefef;
+  border: 1px solid #205fff;
+  border-top: 3px solid  #205fff;
+  width: 400px;
+  height: 250px;
+  box-shadow: #6b6b6b 3px 3px;
+  position: fixed;
+  z-index: 100;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  text-align: center;
+}
+.intro-message-icon {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* pushes button to the right */
+  float: left;
+  margin-left: 5px;
+  font-size: 12px;
+  border-style: none;
+}
+.intro-message-icon p {
+  margin: 0;
+  padding: 0;
+}
+.intro-message-img {
+  order: -1;
+  float: left;
+  align-self: center;
+  background-color: #205fff;
+  width: 10px;
+  height: 10px;
+  display: inline-flex;
+  margin-left: 2px;
+  margin-right: 5px;
+  margin-top: 1px;
+  border-style: none;
+}
+.intro-message-page {
+  text-align: center;
+  font-family: 'DinkieBitmap';
+  position: relative;
+  z-index: 7;
+  border: 3px #205fff solid;
+  background-color: #ffffff;
+  max-width: 23em;
+  height: 200px;
+  margin: 20px auto;
+}
+.intro-message-page p{
+  padding: 8px;
+}
+.intro-message-ok {
+  z-index: 55;
+  position: absolute;
+  border: none;
+  font-family: 'DinkieBitmap';
+  background-color: #efefef;
+  color: #205fff;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-left: 2px solid #ffffff;
+  border-top: 2px solid #ffffff;
+  border-right: 2px solid #6b6b6b;
+  border-bottom: 2px solid #6b6b6b;
+  bottom: 35px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.intro-message-ok:hover {
+  background-color: #c4c4c4;
+}
+.intro-menu-options {
+  position:absolute;
+  bottom: 40px;
+  display: none;
+  flex-direction: column;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 12em;
+  height: 12em;
+  gap: 20px;
+}
+.extras {
+  margin: auto;
+  height: 2em;
+  width: 5em;
+  text-align: center;
+}
+.game-start {
+  margin: 15px;
+  cursor: pointer;
+}
+.extras {
+  cursor: pointer;
+}
+.extras-header {
+  text-align: center;
+  font-family: 'DinkieBitmap';
+  color: #000000;
+  font-size: 1em;
+}
+.extras-images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5px;
+  padding: 20px;
+}
+.intro-menu-options button{
+  border:none;
+  max-width: 15em;
+  max-height: 15em;
+  box-shadow: 4px 4px #288dfa;
+  background: #ffd8f2;
+  font-family: 'DinkieBitmap';
+  font-size: 2em;
+  color: #205fff;
+}
+.game-start:hover {
+  background-color: rgb(205, 149, 165);
+}
+.extras:hover {
+  background-color: rgb(205, 149, 165);
+}
+.extras-container {
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  position: fixed;
+  display: none;
+  background: #f0d6ff;
+  border: 3px solid #205fff;
+  box-shadow: 6px 6px #6b6b6b;
+  width: 50em;
+  height: 30em;
+}
+.extras-images {
+  background-color: #fbfbfb;
+  margin: 20px;
+  border: 5px solid #e2cbef
+}
+.extras-images img{
+  border: 2px solid #205fff;
+  box-shadow: 4px 4px #6b6b6b;
+}
+.extras-images button {
+  background: transparent;
+  display: inline-block;
+}
+.ending-artwork img{
+  height: 100%;
+  width: 100%;
+  left: 15px;
+}
+.ending-artwork {
+  margin: 40px 0;
+  padding: 0;
+  height: 14em;
+  width: 21em;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+}
+.victor-character-sheet img {
+  height: 100%;
+  width: 100%;
+}
+.victor-character-sheet {
+  height: 20em;
+  width: 16em;
+  margin: 10px;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+}
+.wes-character-sheet img {
+  height: 100%;
+  width: 100%;
+}
+.wes-character-sheet {
+  height: 20em;
+  width: 11em;
+  margin: 10px 0;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+}
+.close-extras {
+  border:none;
+  max-width: 15em;
+  max-height: 15em;
+  box-shadow: 4px 4px #288dfa;
+  background: #ffd8f2;
+  font-family: 'DinkieBitmap';
+  font-size: 1.5em;
+  color: #205fff;
+  cursor: pointer;
+  left: 45%;
+  bottom: 50px;
+  position: absolute;
+}
+.close-extras:hover {
+  background-color: rgb(205, 149, 165);
+}
+/* Call Container */
+.start-call {
+  display: none;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: "DinkieBitmap";
+  background:#efefef;
+  border: 1px solid #205fff;
+  border-top: 3px solid  #205fff;
+  max-width: 30em;
+  max-height: 30em;
+  box-shadow: #6b6b6b 3px 3px;
+  position: fixed;
+  z-index: 0;
+  margin-top: 15px;
+}
+.call {
+  display: inline-flex;
+  font-family: 'DinkieBitmap';
+  float: left;
+  margin-left: 5px;
+  font-size: 12px;
+  border-style: none;
+  gap: 5px;
+}
+.call p{
+  margin: 0;
+  padding: 0;
+  margin-top: 3px;
+}
+.call-img {
+  order: -1;
+  align-self: center;
+  background-color: #205fff;
+  width: 10px;
+  height: 10px;
+  display: block;
+  border-style: none;
+}
+.call-container {
+  position: relative;
+  max-width: 19em;
+  max-height: 30em;
+}
+.call-interface-bg {
+  border: 3px solid #205fff;
+  margin: 5px;
+  margin-top: 0;
+  width: 18em;
+  height: 28em;
+}
+.button-list {
+  position:absolute;
+  bottom: 40px;
+  display: flex;
+  left: 20%;
+  width: 64px;
+  height: 64px;
+  gap: 20px;
+  cursor: pointer;
+}
+.button-list button{
+  border:none;
+  background: transparent;
+}
+.pickup-call:hover {
+  opacity: 0.8;
+}
+.skip-call:hover {
+  opacity: 0.8;
+}
+.button-list img{
+  width: 64px;
+  height: 64px;
+  display: inline-block;
+}
+/* Webcam Container */
+.webcam {
+  display: none;
+  font-family: "DinkieBitmap";
+  background:#efefef;
+  border: 1px solid #205fff;
+  border-top: 3px solid  #205fff;
+  max-width: 25em;
+  max-height: 25em;
+  box-shadow: #6b6b6b 3px 3px;
+  position: fixed;
+  z-index: 0;
+  top:50%;
+  right: 50%;
+  transform: translate(-40%, -83.5%);
+  margin-top: 3px;
+}
+.webcam-icon {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* pushes button to the right */
+  float: left;
+  margin-left: 5px;
+  font-size: 12px;
+  border-style: none;
+}
+.webcam-icon p {
+  margin: 0;
+  padding: 0;
+  margin-top: 3px;
+}
+.webcam-img {
+  order: -1;
+  align-self: center;
+  background-color: #205fff;
+  width: 10px;
+  height: 10px;
+  display: inline-flex;
+  margin-left: 5px;
+  margin-right: 5px;
+  border-style: none;
+}
+.webcam-expressions img{
+  border: 2px solid #205fff;
+  max-width: 18em;
+  max-height: 18em;
+
+}
+/* Instogram Container */
+.instogram-container {
+  justify-content: center;
+}
+.instogram {
+  z-index: 3;
+  display: none;
+  background:#efefef;
+  border: 1px solid #205fff;
+  border-top: 3px solid  #205fff;
+  width: 30em;
+  height: 500px;
+  box-shadow: #6b6b6b 3px 3px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: 3px;
+}
+/* Styling the instogram main labels and icons */
+.social-media {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: 'DinkieBitmap';
+  float: left;
+  margin-left: 5px;
+  font-size: 12px;
+  border-style: none;
+}
+.social-media p {
+  margin: 0;
+  padding: 0;
+  margin-top: 3px;
+}
+.social-media-img {
+  order: -1;
+  align-self: center;
+  background-color: #205fff;
+  width: 10px;
+  height: 10px;
+  display: inline-flex;
+  margin-left: 5px;
+  margin-right: 5px;
+  border-style: none;
+}
+/* Styling the Instogram title */
+.instogram-header {
+  border: 2px solid #205fff;
+    border-left: 4px solid #205fff;
+    border-right: 4px solid #205fff;
+    width: 28em;
+    height: 5%;
+    display: inline-block;
+    background-color: #ffffff;
+    padding: 0;
+    margin: 5px auto;
+    right: 50%;
+    transform: translate(11px, 0);
+}
+.instogram-title p{
+  font-family: 'DinkieBitmap';
+  padding-left: 5px;
+  font-weight: bold;
+  width: 150px;
+}
+/* Styling the post page */
+.post-page{
+    padding: 0 0 50px 0;
+}
+.post-border {
+  border: #205fff 2px solid;
+  background: #bb70e6;
+background: linear-gradient(2deg, rgba(187, 112, 230, 1) 0%, rgba(89, 200, 255, 1) 100%);
+    font-family:'DinkieBitmap';
+}
+/* Styling the Instogram Stories */
+.container4 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+  }
+.storyimg {
+  width: 40px;
+  height: 40px;
+  padding-left: 5px;
+  padding-top: 3px;
+}
+/* Styling the Instogram post Inbox */
+.post-inbox {
+    background: #ffffff;
+    border:#205fff 1px solid;
+    border-radius: 5px;
+    padding: 0.3em 1.25em;
+    margin: auto;
+    max-width: 26em;
+    height: 365px;
+    border-bottom: none;
+    overflow-y: scroll;
+}
+.post-inbox::-webkit-scrollbar {
+  display: none; /*Hide Scrollbar*/
+}
+/* Styling Instogram Posts */
+.post-container {
+  padding: 1em 0;
+  border-bottom: 3px solid #c9c9c9;
+}
+.post-sender {
+  color:#006aff;
+  font-size: 0.9em;
+  padding: 0.5em 0;
+}
+.post-image img {
+  padding: 0 1.5em 1.5em 2em;
+  max-width: 20em;
+  max-height: 15em;
+}
+.post-content {
+  font-size: 0.9em;
+  padding: 0.5em 0;
+  word-wrap: break-word;
+  font-family: 'PixelMPLus10';
+}
+.post-button button{
+  border: none;
+  color:#205fff;
+  background-color: transparent;
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 1.5em;
+  font-family: "PixelMPLus10";
+  margin: 2px 2px 20px 6em;
+  transition: color 0.3s ease;
+}
+.post-button button:hover {
+  color: #00008e;
+}
+.post-time {
+  color:#767875;
+  font-size: 0.6em;
+}
+/* Styling the Instogram password page */
+.instogram-password-container {
+  z-index: 6;
+  display: none;
+  background:#efefef;
+  border: 1px solid #205fff;
+  border-top: 3px solid  #205fff;
+  width: 25em;
+  height: 300px;
+  box-shadow: #6b6b6b 3px 3px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: 3px;
+}
+/* Styling the password page icons and heading */
+.enter-password {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: 'DinkieBitmap';
+  float: left;
+  margin-left: 5px;
+  font-size: 12px;
+  border-style: none;
+}
+.enter-password p {
+  margin: 0;
+  padding: 0;
+  margin-top: 3px;
+}
+.password-img {
+  order: -1;
+  align-self: center;
+  background-color: #205fff;
+  width: 10px;
+  height: 10px;
+  display: inline-flex;
+  margin-left: 5px;
+  margin-right: 5px;
+  border-style: none;
+}
+/* Styling the password page */
+.passwordbg img{
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0; 
+  object-fit: cover;
+}
+.password-page {
+  font-family: 'DinkieBitmap';
+  position: relative;
+  z-index: 7;
+  border: 3px #205fff solid;
+  width: 23em;
+  height: 250px;
+  margin: 30px auto;
+}
+.password-inner-page {
+  background-color: #ffffff;
+  position: relative;
+  margin: 30px auto;
+  z-index: 9;
+  width: 17em;
+  height: 200px;
+  z-index: 1;
+}
+.account-picture img{
+  margin: 1em 0 0 6.5em;
+  width: 4em;
+  height: 4em;
+}
+.password-inner-page p{
+  text-align: center;
+}
+.password-input {
+  font-family: 'DinkieBitmap';
+  margin: 0 0 0 3em;
+  box-shadow: #d1d1d1 1px 2px;
+}
+.password-enter {
+  font-family: 'DinkieBitmap';
+  border:none;
+  background-color: #ffffff;
+  box-shadow: #6b6b6b 1px 1px;
+  margin: 0.5em 0 0 6em;
+  cursor:pointer;
+}
+.password-enter:hover {
+  opacity: 0.8;
+  background-color: #c4c4c4;
+}
+.password-enter:active {
+  transform: translateY(1px);
+}
+.error-message {
+  position: relative;
+  color: red;
+  font-family: 'DinkieBitmap';
+  text-align: center;
+  margin-top: 10px;
+  font-size: 14px;
+}
+.error-message-incomplete {
+  position: fixed;
+  bottom: 50px;
+  left: 115px;
+  z-index: 9;
+  color: red;
+  font-family: 'DinkieBitmap';
+  text-align: center;
+  margin: 20px 20px 20px 20px;
+  font-size: 14px;
+  pointer-events: none;
+}
+/* Main jellygram container */
+.jellygram {
+  display: none;
+  position: relative;
+  z-index: 2;
+  background:#efefef;
+  margin:auto;
+  border: 1px solid #205fff;
+  border-top: 3px solid  #205fff;
+  max-width:24.5em;
+  max-height: 540px;
+  box-shadow: #6b6b6b 3px 3px;
+}
+.jine {
+  display: inline-flex;
+  font-family: 'DinkieBitmap';
+  float: left;
+  margin-left: 5px;
+  font-size: 12px;
+  border-style: none;
+}
+.jine p{
+  margin: 0;
+  padding: 0;
+  margin-top: 3px;
+}
+.jine-img {
+  order: -1;
+  align-self: center;
+  background-color: #205fff;
+  width: 10px;
+  height: 10px;
+  display: inline-flex;
+  margin-left: 5px;
+  margin-right: 5px;
+  border-style: none;
+}
+.icons {
+    gap: 2px;
+    border-style: none;
+    float: right;
+    margin-right: 10px;
+    margin-top: 1px;
+    size: 10px;
+}
+.icons img{
+  width: 13px;
+  height: 13px;
+  display: block;
+}
+.minimize {
+  position: relative;
+  display: inline-block;
+}
+.minimise-button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  /* Optional: for accessibility */
+  z-index: 2;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+.minimise-button:hover {
+  background-color: #005bb5;;
+}
+.container1 {
+    font-family: 'DinkieBitmap';
+    max-width: 23em;
+    margin: auto;
+    letter-spacing: 0.5px;
+    height: 80%;
+    padding-right: 4px;
+}
+.msgimg {
+    vertical-align: middle;
+    width: 40px;
+    margin-left: 2%;
+    margin-top: 1%;
+    float: left;
+}
+/* Styling the msg-header container */
+.msg-header {
+    border: 2px solid #205fff;
+    border-left: 4px solid #205fff;
+    border-right: 4px solid #205fff;
+    width: 100%;
+    height: 10%;
+    display: inline-block;
+    background-color: #ffffff;
+    margin: auto;
+    padding: 0;
+}
+
+.container2 {
+    width: 270px;
+    height: auto; 
+    float: left;
+}
+
+/* styling user-name */
+.active {
+    width: 150px;
+    float: left;
+    color: black;
+    font-weight: bold;
+    margin: 0 0 0 5px;
+    height: 10%;
+}
+
+/* Styling the chat box container*/
+.chat-page {
+    padding: 0 0 50px 0;
+}
+.msg-inbox {
+    background:#ffffff;
+    font-family:'PixelMPLus10';
+    border:#205fff 3px solid;
+    padding: 0.5em 1.25em;
+    margin: auto;
+    max-width: 20em;
+    height: 370px;
+    overflow-y: scroll;
+}
+.msg-inbox::-webkit-scrollbar {
+  display: none; /*Hide Scrollbar*/
+}
+/* Styling the chat thread */
+#chat-thread {
+      flex: 1;
+      padding: 15px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      max-height: 240px;
+      overflow-y: scroll;
+    }
+.chat-thread::-webkit-scrollbar {
+  display: none; /*Hide Scrollbar*/
+}
+    .message {
+      padding: 10px;
+      font-size: 15px;
+      line-height: 1.4;
+      word-wrap: break-word;
+    }
+
+    .character {
+      align-self: flex-start;
+      background-color: #83f4a9;
+      color: #000;
+    }
+
+    .player {
+      align-self: flex-end;
+      background-color: #007aff;
+      color: white;
+    }
+
+    .choices {
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      background: #fafafa;
+    }
+
+    .choice{
+      padding: 10px;
+      font-size: 14px;
+      border: none;
+      background-color: #288dfa;
+      color: rgb(255, 255, 255);
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+    }
+.info-button {
+  background: transparent;
+  width: 20px;
+  height: 20px;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  bottom: 30px;
+  justify-content: center;
+  border:none;
+  background:transparent;
+}
+.info-button img {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+}
+.info-button:hover {
+  background-color: #484848;
+}
+.info-page {
+  font-family: 'DinkieBitmap';
+  background: #ffffff;
+  border: 1px solid #205fff;
+  box-shadow: #6b6b6b 3px 3px;
+  border-top: 3px solid  #205fff;
+  width: 23.4em;
+  height: 450px;
+  margin: auto;
+  display: inline-block;
+  position: fixed;
+  z-index: 5;
+  overflow-y: scroll;
+  text-align: center;
+  display: none;
+}
+.info-header {
+  border-bottom: 2px solid #6b6b6b;
+}
+.info-page p {
+  padding: 10px;
+  margin: 20px 10px;
+  }
+.info-page::-webkit-scrollbar {
+  display: none; 
+}
+.close-button {
+  position: absolute;
+  display: flex;
+  top: 10px;
+  left: 10px;
+  width: 13px;
+  height: 13px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  justify-content: center
+}
+.close-button img {
+  display: flex;
+  width: 13px;
+  height: 13px;
+}
+.close-button:hover {
+  background-color: #484848;
+}
+.taskmanager {
+  display:none;
+  font-family: "DinkieBitmap";
+  background:#efefef;
+  border: 1px solid #205fff;
+  border-top: 3px solid  #205fff;
+  width: 15em;
+  height: 300px;
+  box-shadow: #6b6b6b 3px 3px;
+  position: fixed;
+  z-index: 1;
+  top:50%;
+  left: 70%;
+  transform: translate(10%, -83.5%);
+  margin-top: 3px;
+}
+.taskmanager-icon {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* pushes button to the right */
+  float: left;
+  margin-left: 5px;
+  font-size: 12px;
+  border-style: none;
+}
+.taskmanager-icon p {
+  margin: 0;
+  padding: 0;
+  margin-top: 3px;
+}
+.taskmanager-img {
+  order: -1;
+  align-self: center;
+  background-color: #205fff;
+  width: 10px;
+  height: 10px;
+  display: inline-flex;
+  margin-left: 5px;
+  margin-right: 5px;
+  border-style: none;
+}
+.tasks-inbox {
+  background:#ffffff;
+    font-family:"DinkieBitmap";
+    border:#205fff 3px solid;
+    margin: 10px 10px;
+    padding: 10px 3px 3px 3px;
+    width: 13em;
+    height: 250px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.tasks-container > div {
+  padding: 0;
+  border-bottom: 3px solid #c9c9c9;
+  font-size: 12px;
+}
+.tasks-container > div:last-child {
+  border-bottom: none;
+}
+.notification {
+  position: fixed;
+  top: 0;
+  left: 40px;
+  background-color: red;
+  border-radius: 5px;
+}
+.jellygramicon {
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  display: inline-block;
+  left: 0;
+  top: 0;
+  padding: 10px 5px 5px 10px;
+}
+.jellygramapp {
+  position: absolute;
+  top: 0;
+  left: 0;
+  float: left;
+  width: 50px;
+  height: 50px;
+  background: transparent;
+  border: none;
+  /* Optional: for accessibility */
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+.jellygramicon img {
+    width: 50px;
+    height: 55px;
+    display: inline-block;
+  }
+.instogramicon {
+  height: 13px;
+  width: 13px;
+  position: absolute;
+  display: none;
+  padding: 70px 5px 5px 4px;
+  z-index: 2;
+}
+.instogramapp {
+  position: absolute;
+  top: 60px;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: none;
+  /* Optional: for accessibility */
+  z-index: 2;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+.instogramicon img {
+    width: 43px;
+    height: 45px;
+    display: inline-block;
+  }
+.instogrampassword {
+  opacity: 0;
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  display: inline-block;
+  top: 75%;
+  padding: 5px 5px 5px 5px;
+  background-color: none;
+  z-index: 3;
+  cursor: pointer;
+}
+.taskmanagericon {
+  height: 13px;
+  width: 13px;
+  position: absolute;
+  display: none;
+  padding: 115px 5px 5px 0;
+  left: 0;
+}
+.taskmanagerapp {
+  position: absolute;
+  top: 105px;
+  width: 65px;
+  height: 65px;
+  background: transparent;
+  border: none;
+  /* Optional: for accessibility */
+  z-index: 2;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+.taskmanagericon img {
+    width: 65px;
+    height: 65px;
+    display: inline-block;
+  }
+.scamthread {
+  z-index: 50;
+  display: none;
+  background:#efefef;
+  border: 1px solid #205fff;
+  border-top: 3px solid  #205fff;
+  width: 30em;
+  height: 400px;
+  box-shadow: #6b6b6b 3px 3px;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: 3px;
+}
+.scamicons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: 'DinkieBitmap';
+  float: left;
+  margin-left: 5px;
+  font-size: 12px;
+  border-style: none;
+}
+.scamicons p {
+  margin: 0;
+  padding: 0;
+  margin-top: 3px;
+}
+.scam-img {
+  order: -1;
+  align-self: center;
+  background-color: #205fff;
+  width: 10px;
+  height: 10px;
+  display: inline-flex;
+  margin-left: 5px;
+  margin-right: 5px;
+  border-style: none;
+}
+.scam-post-inbox {
+  background: #f3eded;
+  font-family: 'PixelMPLus10';
+  font-size: 13px;
+  border: #205fff 3px solid;
+  margin: 10px 10px 10px 10px;
+  padding: 10px 10px 10px 10px;
+  width: 33.5em;
+  height: 350px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.scam-post-container {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 2px solid #c9c9c9;
+  margin-top: 15px;
+}
+.scam-post-sender {
+  color: #017728;
+}
+.scam-post-time {
+  font-size: 10px;
+  color: #4a643d;
+  -ms-flex-order: 2;
+}
+.taskbar {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width:100%;
+  height: 25px;
+  background-color:#cbcbcb;
+  border-top: 1px solid #ffffff;
+}
+.start-button {
+  font-family: "DinkieBitmap";
+  left: 0;
+  position: fixed;
+  max-width: 100px;
+  height: 20px;
+  display: none;
+  gap: 10px;
+  cursor: pointer;
+  margin: 3px 0 0 10px;
+  color: rgb(0, 21, 255);
+  background-color: #cbcbcb;
+  box-shadow: 1px #584747;
+  border-left: 1px solid #ffffff;
+  border-top: 1px solid #ffffff;
+}
+.start-button:hover {
+  background-color: #484848;
+}
+.start-button:active {
+  transform: translateY(1px);
+}
+.start-menu {
+  font-family: "DinkieBitmap";
+  display: none;
+  flex-direction: column;
+  gap: 2px;
+  max-height: 150px;
+  max-width: 100px;
+  background-color: #cbcbcb;
+  box-shadow: 2px #584747;
+  border: 2px solid #ffffff;
+  border-bottom: none;
+  border-right: none;
+  position: fixed;
+  bottom: 25px;
+  margin: 0 0 0 10px;
+  padding: 3px;
+  align-items: center;
+}
+.start-menu > button {
+  font-family: "DinkieBitmap";
+  border: none;
+  color: rgb(0, 21, 255);
+  width: 100px;
+  height: 20px;
+  background-color:#cbcbcb;
+  border-left: 2px solid #ffffff;
+  border-top: 2px solid #ffffff;
+  border-right: 2px solid #6b6b6b;
+  border-bottom: 2px solid #6b6b6b;
+  cursor: pointer;
+}
+.start-menu > button:hover {
+  background-color: #484848;
+}
+.wes-icon {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+}
+.task-updated {
+  text-decoration: line-through;
+  color: #ff0000;
+  background-color: #ffffff;
+  transition: background 0.2s, color 0.2s;
+}
+.task-updated-animation {
+  animation: bounce 1s;
+}
+.choice:hover {
+      background-color: #005bb5;
+    }
+.hidden {
+      display: none;
+    }
+#winthose-overlay {
+  width: 100vw;
+  height: 100vh;
+  z-index: 109;
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+}
+#bootup-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 150; /* Higher than fade-overlay */
+  display: block;
+}
+#fade-overlay {
+  position: fixed;
+  top: 0; left: 0%;
+  width: 120vw;
+  height: 100vh;
+  background: #000;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 110;
+  transition: opacity 1.5s ease;
+  object-fit: cover;
+}
+#fade-overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+#outside-bg {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 96;
+  transition: opacity 1.5s ease;
+  opacity: 0;
+  margin: auto;
+  pointer-events: none;
+}
+#outside-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#outside-bg.active {
+  opacity: 1;
+}
+.final-message {
+  z-index: 102;
+  font-family: "DinkieBitmap";
+  background:#efefef;
+  border: 1px solid #205fff;
+  border-top: 3px solid  #205fff;
+  width: 400px;
+  height: 150px;
+  box-shadow: #6b6b6b 3px 3px;
+  position: fixed;
+  z-index: 100;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+.message-icon {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* pushes button to the right */
+  float: left;
+  margin-left: 5px;
+  font-size: 12px;
+  border-style: none;
+}
+.message-icon p {
+  margin: 0;
+  padding: 0;
+  margin-top: 3px;
+}
+.message-img {
+  order: -1;
+  align-self: center;
+  background-color: #205fff;
+  width: 10px;
+  height: 10px;
+  display: inline-flex;
+  margin-left: 5px;
+  margin-right: 5px;
+  border-style: none;
+}
+.message-page {
+  text-align: center;
+  font-family: 'DinkieBitmap';
+  position: relative;
+  z-index: 7;
+  border: 3px #205fff solid;
+  background-color: #ffffff;
+  max-width: 23em;
+  height: 100px;
+  margin: 20px auto;
+}
+.message-page p{
+  padding: 10px;
+}
+.close-message {
+  border: none;
+  font-family: 'DinkieBitmap';
+  background-color: #efefef;
+  color: #205fff;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-left: 2px solid #ffffff;
+  border-top: 2px solid #ffffff;
+  border-right: 2px solid #6b6b6b;
+  border-bottom: 2px solid #6b6b6b;
+}
+.close-message:hover {
+  background-color: #c4c4c4;
+}
+.thank-you-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 103; /* or higher than any other overlay */
+  display: none; /* hidden by default */
+  align-items: center;
+  justify-content: center;
+  background: #000; /* optional: fade background */
+}
+
+.thank-you-image {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  pointer-events: none;
+}
+/* Styling the typing animation */
+.typing-indicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 15px;
+  padding: 10px 15px;
+  background-color: #83f4a9;
+  margin: 10px 0;
+  align-self: flex-start;
+}
+
+.typing-dot {
+  width: 6px;
+  height: 6px;
+  margin: 0 3px;
+  background-color: #767875;
+  animation: bounce 1s infinite;
+}
+
+.typing-dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.typing-dot:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes bounce {
+  0%, 80%, 100% {
+    transform: scale(1);
+    opacity: 0.4;
+  }
+  40% {
+    transform: scale(1.5);
+    opacity: 1;
+  }
+}
+
+
